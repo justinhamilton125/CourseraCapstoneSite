@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header img {
+  padding-right:100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-family: "Markazi Text", serif; /* Add a fallback font */
+  font-size: "40px";
+  text-decoration: none;
+  color: #000000;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section1 {
+  background-color: #495E57;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section1 .container1 {
+  width: 50%; /* Takes up half the width */
+  padding-left: 20px; /* Padding on the left */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.section1 img {
+  width: 50%; /* Set the image to take the full width of its parent */
+  margin-top: 20px; /* Optional: space above the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Other styles remain the same */
+.section1 .container1 h1 {
+  font-weight: 500;
+  font-family: "Markazi Text", serif; /* Add a fallback font */
+  color: #F4CE14;
+  font-size: 64px;
+}
+
+.section1 .container1 h2 {
+  font-family: "Markazi Text", serif; /* Add a fallback font */
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.section1 .container1 p {
+  font-family: "Karla", serif; /* Add a fallback font */
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.section1 .container1 button {
+  font-family: "Karla", serif; /* Add a fallback font */
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #F4CE14;
+  border: none;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.section2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.section2 .container2 {
+  display: flex; /* Enable flexbox for the container */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Space between header and button */
+  width: 100%; /* Full width of the section */
+}
+
+.section2 .container2 h1 {
+  font-weight: 500;
+  font-family: "Markazi Text", serif; /* Add a fallback font */
+  color: #333;
+  font-size: 64px;
+  margin: 0; /* Remove default margin */
+  width: auto; /* Allow header to adjust its width */
+}
+
+.section2 .container2 button {
+  font-family: "Karla", serif; /* Add a fallback font */
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px; /* Add padding for better appearance */
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column;
+      align-items: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.experience-fragment {
+  border: 1px solid #ddd;
+  background-color: #EDEFEE;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 20%;
+}
+
+.experience-fragment h2{
+  font-family: "Karla", serif; /* Add a fallback font */
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.experience-fragment p{
+  font-family: "Karla", serif; /* Add a fallback font */
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  height: auto;
+}
+
+.experience-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.price {
+  font-size: 1.5em;
+  color: #ee9972;
+}
+
+.image-container {
+  position: relative;
+  width: 300px; /* Adjust as necessary */
+  height: auto;
+}
+
+.image-base {
+  width: 100%; /* Base image */
+  height: auto;
+}
+
+.image-overlay {
+  position: absolute; /* Position the overlay image */
+  top: 20px; /* Adjust as necessary to position it */
+  left: 20px; /* Adjust as necessary to position it */
+  width: 70%; /* You can adjust the size */
+  height: auto;
+  z-index: 1; /* Bring it on top */
 }
